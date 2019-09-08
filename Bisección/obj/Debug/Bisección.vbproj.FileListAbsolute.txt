@@ -1,0 +1,11 @@
+E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Bisección\Bisección\bin\Debug\Bisección.exe.config
+E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Bisección\Bisección\bin\Debug\Bisección.exe
+E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Bisección\Bisección\bin\Debug\Bisección.pdb
+E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Bisección\Bisección\bin\Debug\Bisección.xml
+E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Bisección\Bisección\obj\Debug\Bisección.Form1.resources
+E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Bisección\Bisección\obj\Debug\Bisección.Resources.resources
+E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Bisección\Bisección\obj\Debug\Bisección.vbproj.GenerateResource.cache
+E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Bisección\Bisección\obj\Debug\Bisección.exe
+E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Bisección\Bisección\obj\Debug\Bisección.xml
+E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Bisección\Bisección\obj\Debug\Bisección.pdb
+E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Bisección\Bisección\obj\Debug\Bisección.vbprojResolveAssemblyReference.cache
