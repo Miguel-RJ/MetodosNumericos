@@ -31,6 +31,16 @@ Partial Class Form1
         Me.Calcular = New System.Windows.Forms.Button()
         Me.Salir = New System.Windows.Forms.Button()
         Me.Salida = New System.Windows.Forms.DataGridView()
+        Me.lc = New System.Windows.Forms.Label()
+        Me.lb = New System.Windows.Forms.Label()
+        Me.salida2 = New System.Windows.Forms.Label()
+        Me.td = New System.Windows.Forms.TextBox()
+        Me.lblderivada = New System.Windows.Forms.Label()
+        Me.ti = New System.Windows.Forms.TextBox()
+        Me.lblinicio = New System.Windows.Forms.Label()
+        Me.CBOpe = New System.Windows.Forms.ComboBox()
+        Me.lOpe = New System.Windows.Forms.Label()
+        Me.Limpiar = New System.Windows.Forms.Button()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -39,22 +49,13 @@ Partial Class Form1
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lc = New System.Windows.Forms.Label()
-        Me.lb = New System.Windows.Forms.Label()
-        Me.salida2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.td = New System.Windows.Forms.TextBox()
-        Me.lblderivada = New System.Windows.Forms.Label()
-        Me.ti = New System.Windows.Forms.TextBox()
-        Me.lblinicio = New System.Windows.Forms.Label()
         CType(Me.Salida, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lf
         '
         Me.lf.AutoSize = True
-        Me.lf.Location = New System.Drawing.Point(12, 24)
+        Me.lf.Location = New System.Drawing.Point(12, 57)
         Me.lf.Name = "lf"
         Me.lf.Size = New System.Drawing.Size(83, 13)
         Me.lf.TabIndex = 0
@@ -63,7 +64,7 @@ Partial Class Form1
         'la
         '
         Me.la.AutoSize = True
-        Me.la.Location = New System.Drawing.Point(12, 58)
+        Me.la.Location = New System.Drawing.Point(237, 57)
         Me.la.Name = "la"
         Me.la.Size = New System.Drawing.Size(54, 13)
         Me.la.TabIndex = 1
@@ -71,35 +72,36 @@ Partial Class Form1
         '
         'tf
         '
-        Me.tf.Location = New System.Drawing.Point(105, 21)
+        Me.tf.Location = New System.Drawing.Point(105, 54)
         Me.tf.Name = "tf"
         Me.tf.Size = New System.Drawing.Size(100, 20)
         Me.tf.TabIndex = 4
         '
         'ta
         '
-        Me.ta.Location = New System.Drawing.Point(105, 55)
+        Me.ta.Location = New System.Drawing.Point(330, 54)
         Me.ta.Name = "ta"
         Me.ta.Size = New System.Drawing.Size(100, 20)
         Me.ta.TabIndex = 5
         '
         'tb
         '
-        Me.tb.Location = New System.Drawing.Point(105, 87)
+        Me.tb.Location = New System.Drawing.Point(575, 54)
         Me.tb.Name = "tb"
         Me.tb.Size = New System.Drawing.Size(100, 20)
         Me.tb.TabIndex = 6
         '
         'tc
         '
-        Me.tc.Location = New System.Drawing.Point(105, 121)
+        Me.tc.Location = New System.Drawing.Point(105, 88)
         Me.tc.Name = "tc"
         Me.tc.Size = New System.Drawing.Size(100, 20)
         Me.tc.TabIndex = 7
         '
         'Calcular
         '
-        Me.Calcular.Location = New System.Drawing.Point(240, 52)
+        Me.Calcular.Enabled = False
+        Me.Calcular.Location = New System.Drawing.Point(12, 133)
         Me.Calcular.Name = "Calcular"
         Me.Calcular.Size = New System.Drawing.Size(75, 23)
         Me.Calcular.TabIndex = 8
@@ -108,7 +110,7 @@ Partial Class Form1
         '
         'Salir
         '
-        Me.Salir.Location = New System.Drawing.Point(240, 87)
+        Me.Salir.Location = New System.Drawing.Point(485, 133)
         Me.Salir.Name = "Salir"
         Me.Salir.Size = New System.Drawing.Size(75, 23)
         Me.Salir.TabIndex = 9
@@ -119,15 +121,105 @@ Partial Class Form1
         '
         Me.Salida.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.Salida.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7, Me.Column8})
-        Me.Salida.Location = New System.Drawing.Point(12, 229)
+        Me.Salida.Location = New System.Drawing.Point(12, 165)
         Me.Salida.Name = "Salida"
-        Me.Salida.Size = New System.Drawing.Size(843, 150)
+        Me.Salida.Size = New System.Drawing.Size(805, 150)
         Me.Salida.TabIndex = 10
+        '
+        'lc
+        '
+        Me.lc.AutoSize = True
+        Me.lc.Location = New System.Drawing.Point(12, 91)
+        Me.lc.Name = "lc"
+        Me.lc.Size = New System.Drawing.Size(73, 13)
+        Me.lc.TabIndex = 12
+        Me.lc.Text = "Ingrese cifras:"
+        '
+        'lb
+        '
+        Me.lb.AutoSize = True
+        Me.lb.Location = New System.Drawing.Point(482, 57)
+        Me.lb.Name = "lb"
+        Me.lb.Size = New System.Drawing.Size(54, 13)
+        Me.lb.TabIndex = 11
+        Me.lb.Text = "Ingrese b:"
+        '
+        'salida2
+        '
+        Me.salida2.AutoSize = True
+        Me.salida2.Location = New System.Drawing.Point(12, 333)
+        Me.salida2.Name = "salida2"
+        Me.salida2.Size = New System.Drawing.Size(73, 13)
+        Me.salida2.TabIndex = 13
+        Me.salida2.Text = "Ingrese cifras:"
+        Me.salida2.Visible = False
+        '
+        'td
+        '
+        Me.td.Location = New System.Drawing.Point(330, 88)
+        Me.td.Name = "td"
+        Me.td.Size = New System.Drawing.Size(100, 20)
+        Me.td.TabIndex = 16
+        '
+        'lblderivada
+        '
+        Me.lblderivada.AutoSize = True
+        Me.lblderivada.Location = New System.Drawing.Point(237, 91)
+        Me.lblderivada.Name = "lblderivada"
+        Me.lblderivada.Size = New System.Drawing.Size(86, 13)
+        Me.lblderivada.TabIndex = 15
+        Me.lblderivada.Text = "Ingrese derivada"
+        '
+        'ti
+        '
+        Me.ti.Location = New System.Drawing.Point(575, 88)
+        Me.ti.Name = "ti"
+        Me.ti.Size = New System.Drawing.Size(100, 20)
+        Me.ti.TabIndex = 18
+        '
+        'lblinicio
+        '
+        Me.lblinicio.AutoSize = True
+        Me.lblinicio.Location = New System.Drawing.Point(482, 91)
+        Me.lblinicio.Name = "lblinicio"
+        Me.lblinicio.Size = New System.Drawing.Size(69, 13)
+        Me.lblinicio.TabIndex = 17
+        Me.lblinicio.Text = "Ingrese inicio"
+        '
+        'CBOpe
+        '
+        Me.CBOpe.FormattingEnabled = True
+        Me.CBOpe.Items.AddRange(New Object() {"Bisección", "Regla Falsa", "Newton-Raphson"})
+        Me.CBOpe.Location = New System.Drawing.Point(105, 12)
+        Me.CBOpe.Name = "CBOpe"
+        Me.CBOpe.Size = New System.Drawing.Size(210, 21)
+        Me.CBOpe.TabIndex = 19
+        '
+        'lOpe
+        '
+        Me.lOpe.AutoSize = True
+        Me.lOpe.Location = New System.Drawing.Point(12, 12)
+        Me.lOpe.Name = "lOpe"
+        Me.lOpe.Size = New System.Drawing.Size(83, 13)
+        Me.lOpe.TabIndex = 20
+        Me.lOpe.Text = "Ingrese función:"
+        '
+        'Limpiar
+        '
+        Me.Limpiar.Enabled = False
+        Me.Limpiar.Location = New System.Drawing.Point(240, 133)
+        Me.Limpiar.Name = "Limpiar"
+        Me.Limpiar.Size = New System.Drawing.Size(75, 23)
+        Me.Limpiar.TabIndex = 21
+        Me.Limpiar.Text = "Limpiar"
+        Me.Limpiar.UseVisualStyleBackColor = True
         '
         'Column1
         '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader
         Me.Column1.HeaderText = "Índice"
         Me.Column1.Name = "Column1"
+        Me.Column1.Width = 61
         '
         'Column2
         '
@@ -164,87 +256,18 @@ Partial Class Form1
         Me.Column8.HeaderText = "error"
         Me.Column8.Name = "Column8"
         '
-        'lc
-        '
-        Me.lc.AutoSize = True
-        Me.lc.Location = New System.Drawing.Point(12, 124)
-        Me.lc.Name = "lc"
-        Me.lc.Size = New System.Drawing.Size(73, 13)
-        Me.lc.TabIndex = 12
-        Me.lc.Text = "Ingrese cifras:"
-        '
-        'lb
-        '
-        Me.lb.AutoSize = True
-        Me.lb.Location = New System.Drawing.Point(12, 90)
-        Me.lb.Name = "lb"
-        Me.lb.Size = New System.Drawing.Size(54, 13)
-        Me.lb.TabIndex = 11
-        Me.lb.Text = "Ingrese b:"
-        '
-        'salida2
-        '
-        Me.salida2.AutoSize = True
-        Me.salida2.Location = New System.Drawing.Point(12, 392)
-        Me.salida2.Name = "salida2"
-        Me.salida2.Size = New System.Drawing.Size(73, 13)
-        Me.salida2.TabIndex = 13
-        Me.salida2.Text = "Ingrese cifras:"
-        Me.salida2.Visible = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.PictureBox1.Image = Global.Bisección.My.Resources.Resources.CodeCogsEqn__1_
-        Me.PictureBox1.Location = New System.Drawing.Point(349, 21)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(470, 120)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 14
-        Me.PictureBox1.TabStop = False
-        '
-        'td
-        '
-        Me.td.Location = New System.Drawing.Point(105, 158)
-        Me.td.Name = "td"
-        Me.td.Size = New System.Drawing.Size(100, 20)
-        Me.td.TabIndex = 16
-        '
-        'lblderivada
-        '
-        Me.lblderivada.AutoSize = True
-        Me.lblderivada.Location = New System.Drawing.Point(12, 161)
-        Me.lblderivada.Name = "lblderivada"
-        Me.lblderivada.Size = New System.Drawing.Size(86, 13)
-        Me.lblderivada.TabIndex = 15
-        Me.lblderivada.Text = "Ingrese derivada"
-        '
-        'ti
-        '
-        Me.ti.Location = New System.Drawing.Point(105, 193)
-        Me.ti.Name = "ti"
-        Me.ti.Size = New System.Drawing.Size(100, 20)
-        Me.ti.TabIndex = 18
-        '
-        'lblinicio
-        '
-        Me.lblinicio.AutoSize = True
-        Me.lblinicio.Location = New System.Drawing.Point(12, 196)
-        Me.lblinicio.Name = "lblinicio"
-        Me.lblinicio.Size = New System.Drawing.Size(69, 13)
-        Me.lblinicio.TabIndex = 17
-        Me.lblinicio.Text = "Ingrese inicio"
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(875, 420)
+        Me.ClientSize = New System.Drawing.Size(829, 351)
+        Me.Controls.Add(Me.Limpiar)
+        Me.Controls.Add(Me.lOpe)
+        Me.Controls.Add(Me.CBOpe)
         Me.Controls.Add(Me.ti)
         Me.Controls.Add(Me.lblinicio)
         Me.Controls.Add(Me.td)
         Me.Controls.Add(Me.lblderivada)
-        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.salida2)
         Me.Controls.Add(Me.lc)
         Me.Controls.Add(Me.lb)
@@ -260,7 +283,6 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "Bisección"
         CType(Me.Salida, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -275,6 +297,16 @@ Partial Class Form1
     Friend WithEvents Calcular As Button
     Friend WithEvents Salir As Button
     Friend WithEvents Salida As DataGridView
+    Friend WithEvents lc As Label
+    Friend WithEvents lb As Label
+    Friend WithEvents salida2 As Label
+    Friend WithEvents td As TextBox
+    Friend WithEvents lblderivada As Label
+    Friend WithEvents ti As TextBox
+    Friend WithEvents lblinicio As Label
+    Friend WithEvents CBOpe As ComboBox
+    Friend WithEvents lOpe As Label
+    Friend WithEvents Limpiar As Button
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
@@ -283,12 +315,4 @@ Partial Class Form1
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
-    Friend WithEvents lc As Label
-    Friend WithEvents lb As Label
-    Friend WithEvents salida2 As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents td As TextBox
-    Friend WithEvents lblderivada As Label
-    Friend WithEvents ti As TextBox
-    Friend WithEvents lblinicio As Label
 End Class
