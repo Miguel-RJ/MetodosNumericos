@@ -22,3 +22,15 @@ E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisecci
 E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\obj\Debug\Bisección.exe
 E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\obj\Debug\Bisección.xml
 E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\obj\Debug\Bisección.pdb
+C:\Users\IEUser\MetodosNumericosParcial1\Bisección\bin\Debug\Bisección.exe.config
+C:\Users\IEUser\MetodosNumericosParcial1\Bisección\bin\Debug\Bisección.exe
+C:\Users\IEUser\MetodosNumericosParcial1\Bisección\bin\Debug\Bisección.pdb
+C:\Users\IEUser\MetodosNumericosParcial1\Bisección\bin\Debug\Bisección.xml
+C:\Users\IEUser\MetodosNumericosParcial1\Bisección\obj\Debug\Bisección.vbprojAssemblyReference.cache
+C:\Users\IEUser\MetodosNumericosParcial1\Bisección\obj\Debug\Bisección.Form1.resources
+C:\Users\IEUser\MetodosNumericosParcial1\Bisección\obj\Debug\Bisección.Resources.resources
+C:\Users\IEUser\MetodosNumericosParcial1\Bisección\obj\Debug\Bisección.vbproj.GenerateResource.cache
+C:\Users\IEUser\MetodosNumericosParcial1\Bisección\obj\Debug\Bisección.vbproj.CopyComplete
+C:\Users\IEUser\MetodosNumericosParcial1\Bisección\obj\Debug\Bisección.exe
+C:\Users\IEUser\MetodosNumericosParcial1\Bisección\obj\Debug\Bisección.xml
+C:\Users\IEUser\MetodosNumericosParcial1\Bisección\obj\Debug\Bisección.pdb
