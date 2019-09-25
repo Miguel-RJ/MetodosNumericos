@@ -14,7 +14,6 @@ E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisecci
 E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\bin\Debug\Bisección.pdb
 E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\bin\Debug\Bisección.xml
 E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\obj\Debug\Bisección.vbprojAssemblyReference.cache
-E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\obj\Debug\Bisección.Form1.resources
 E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\obj\Debug\Bisección.Resources.resources
 E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\obj\Debug\Bisección.vbproj.GenerateResource.cache
 E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\obj\Debug\Bisección.vbproj.CoreCompileInputs.cache
@@ -22,3 +21,6 @@ E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisecci
 E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\obj\Debug\Bisección.exe
 E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\obj\Debug\Bisección.xml
 E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\obj\Debug\Bisección.pdb
+E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\obj\Debug\Bisección.PrimerParcial.resources
+E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\obj\Debug\Bisección.Menu.resources
+E:\UPIICSA\Semestre 2019-2\Métodos Numéricos\Primer Parcial\Bisección\Bisección\obj\Debug\Bisección.SegundoParcial.resources
