@@ -38,7 +38,7 @@ Partial Class Llenado
         '
         'txtValor
         '
-        Me.txtValor.Location = New System.Drawing.Point(60, 45)
+        Me.txtValor.Location = New System.Drawing.Point(79, 45)
         Me.txtValor.Name = "txtValor"
         Me.txtValor.Size = New System.Drawing.Size(100, 20)
         Me.txtValor.TabIndex = 1
