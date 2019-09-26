@@ -78,6 +78,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Llenado.Designer.vb">
+      <DependentUpon>Llenado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Llenado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pares.Designer.vb">
+      <DependentUpon>Pares.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Pares.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="PrimerParcial.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -114,8 +126,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Llenado.resx">
+      <DependentUpon>Llenado.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pares.resx">
+      <DependentUpon>Pares.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrimerParcial.resx">
       <DependentUpon>PrimerParcial.vb</DependentUpon>

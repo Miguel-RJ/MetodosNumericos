@@ -42,7 +42,7 @@ Partial Class SegundoParcial
         Me.a13 = New System.Windows.Forms.TextBox()
         Me.lcifras = New System.Windows.Forms.Label()
         Me.tc = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.CBSeleccion = New System.Windows.Forms.ComboBox()
         Me.b3 = New System.Windows.Forms.TextBox()
         Me.b2 = New System.Windows.Forms.TextBox()
         Me.b1 = New System.Windows.Forms.TextBox()
@@ -57,6 +57,8 @@ Partial Class SegundoParcial
         Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.lresultado = New System.Windows.Forms.Label()
+        Me.Pares = New System.Windows.Forms.Button()
         CType(Me.Salida, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -230,13 +232,14 @@ Partial Class SegundoParcial
         Me.tc.Size = New System.Drawing.Size(34, 20)
         Me.tc.TabIndex = 19
         '
-        'ComboBox1
+        'CBSeleccion
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(27, 13)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(203, 21)
-        Me.ComboBox1.TabIndex = 20
+        Me.CBSeleccion.FormattingEnabled = True
+        Me.CBSeleccion.Items.AddRange(New Object() {"Jacobi", "Gauss-Seidel"})
+        Me.CBSeleccion.Location = New System.Drawing.Point(27, 13)
+        Me.CBSeleccion.Name = "CBSeleccion"
+        Me.CBSeleccion.Size = New System.Drawing.Size(203, 21)
+        Me.CBSeleccion.TabIndex = 20
         '
         'b3
         '
@@ -333,11 +336,32 @@ Partial Class SegundoParcial
         Me.Column7.HeaderText = "E(Z)"
         Me.Column7.Name = "Column7"
         '
+        'lresultado
+        '
+        Me.lresultado.AutoSize = True
+        Me.lresultado.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lresultado.Location = New System.Drawing.Point(23, 378)
+        Me.lresultado.Name = "lresultado"
+        Me.lresultado.Size = New System.Drawing.Size(0, 20)
+        Me.lresultado.TabIndex = 28
+        Me.lresultado.Visible = False
+        '
+        'Pares
+        '
+        Me.Pares.Location = New System.Drawing.Point(597, 60)
+        Me.Pares.Name = "Pares"
+        Me.Pares.Size = New System.Drawing.Size(75, 23)
+        Me.Pares.TabIndex = 29
+        Me.Pares.Text = "Pares"
+        Me.Pares.UseVisualStyleBackColor = True
+        '
         'SegundoParcial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(750, 450)
+        Me.Controls.Add(Me.Pares)
+        Me.Controls.Add(Me.lresultado)
         Me.Controls.Add(Me.Salida)
         Me.Controls.Add(Me.Salir)
         Me.Controls.Add(Me.Limpiar)
@@ -345,7 +369,7 @@ Partial Class SegundoParcial
         Me.Controls.Add(Me.b3)
         Me.Controls.Add(Me.b2)
         Me.Controls.Add(Me.b1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.CBSeleccion)
         Me.Controls.Add(Me.tc)
         Me.Controls.Add(Me.lcifras)
         Me.Controls.Add(Me.a33)
@@ -394,7 +418,7 @@ Partial Class SegundoParcial
     Friend WithEvents a13 As TextBox
     Friend WithEvents lcifras As Label
     Friend WithEvents tc As TextBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents CBSeleccion As ComboBox
     Friend WithEvents b3 As TextBox
     Friend WithEvents b2 As TextBox
     Friend WithEvents b1 As TextBox
@@ -409,4 +433,6 @@ Partial Class SegundoParcial
     Friend WithEvents Column5 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents lresultado As Label
+    Friend WithEvents Pares As Button
 End Class

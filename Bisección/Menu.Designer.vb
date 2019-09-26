@@ -30,7 +30,7 @@ Partial Class Menu
         'CBSelect
         '
         Me.CBSelect.FormattingEnabled = True
-        Me.CBSelect.Items.AddRange(New Object() {"Primer Parcial", "Segundo Parcial"})
+        Me.CBSelect.Items.AddRange(New Object() {"Jacobi", "Gauss-Seidel"})
         Me.CBSelect.Location = New System.Drawing.Point(40, 12)
         Me.CBSelect.Name = "CBSelect"
         Me.CBSelect.Size = New System.Drawing.Size(215, 21)

@@ -1,20 +1,38 @@
 ﻿Public Class SegundoParcial
     Dim X(50), Y(60), Z(60), ec, ex(60), ey(60), ez(60) As Single
+
+    Private Sub Pares_Click(sender As Object, e As EventArgs) Handles Pares.Click
+        Dim ParesForm As New Pares
+        ParesForm.Show()
+    End Sub
+
     Dim i, k, redon, c As Integer
 
     Private Sub Calcular_Click(sender As Object, e As EventArgs) Handles Calcular.Click
         c = tc.Text
         redon = c + 2
         ec = 0.5 * 10 ^ (-c)
+
         ex(i) = 1
         ey(i) = 1
         ez(i) = 1
+        Salida.Rows.Add("0", "0", "0", "0", "-------", "-------", "-------")
         Do While ex(i) > ec Or ey(i) > ec Or ez(i) > ec
             i = i + 1
 
-            X(i) = (b1.Text - a12.Text * Y(i - 1) - a13.Text * Z(i - 1)) / a11.Text
-            Y(i) = (b2.Text - a21.Text * X(i - 1) - a23.Text * Z(i - 1)) / a22.Text
-            Z(i) = (b3.Text - a31.Text * X(i - 1) - a32.Text * Y(i - 1)) / a33.Text
+            Select Case CBSeleccion.SelectedItem
+                Case "Jacobi"
+                    X(i) = (b1.Text - a12.Text * Y(i - 1) - a13.Text * Z(i - 1)) / a11.Text
+                    Y(i) = (b2.Text - a21.Text * X(i - 1) - a23.Text * Z(i - 1)) / a22.Text
+                    Z(i) = (b3.Text - a31.Text * X(i - 1) - a32.Text * Y(i - 1)) / a33.Text
+                Case "Gauss-Seidel"
+                    X(i) = (b1.Text - a12.Text * Y(i - 1) - a13.Text * Z(i - 1)) / a11.Text
+                    Y(i) = (b2.Text - a21.Text * X(i) - a23.Text * Z(i - 1)) / a22.Text
+                    Z(i) = (b3.Text - a31.Text * X(i) - a32.Text * Y(i)) / a33.Text
+                Case Else
+
+            End Select
+
 
             ex(i) = Math.Abs((X(i) - X(i - 1)) / X(i))
             ey(i) = Math.Abs((Y(i) - Y(i - 1)) / Y(i))
@@ -22,8 +40,12 @@
 
             Salida.Rows.Add(i, Math.Round(X(i), redon), Math.Round(Y(i), redon), Math.Round(Z(i), redon),
                             Math.Round(ex(i), redon), Math.Round(ey(i), redon), Math.Round(ez(i), redon))
+            lresultado.Text = "Las raices son X = " + X(i).ToString() + "     Y = " + Y(i).ToString() + "     Z = " + Z(i).ToString()
 
         Loop
+        lresultado.Visible = True
+
+
     End Sub
 
     Private Sub Salir_Click(sender As Object, e As EventArgs) Handles Salir.Click
@@ -59,6 +81,8 @@
         ez.Initialize()
         ec = 0
         i = 0
+        lresultado.Text = ""
+        lresultado.Visible = False
     End Sub
 End Class
 
