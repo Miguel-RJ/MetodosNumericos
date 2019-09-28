@@ -9,9 +9,9 @@
             For index2 = 0 To 1
                 Dim LlenadoForm = New Llenado
                 If index2 = 0 Then
-                    LlenadoForm.Label1.Text = "Ingrese X" + index.ToString()
+                    LlenadoForm.Label1.Text = "Ingrese X(" + (index - 1).ToString() + ")"
                 Else
-                    LlenadoForm.Label1.Text = "Ingrese Y" + index.ToString()
+                    LlenadoForm.Label1.Text = "Ingrese Y(" + (index - 1).ToString() + ")"
                 End If
                 If LlenadoForm.ShowDialog() = Windows.Forms.DialogResult.OK Then
                     x(index - 1, index2) = LlenadoForm.txtValor.Text
