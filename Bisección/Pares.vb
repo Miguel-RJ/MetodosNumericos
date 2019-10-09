@@ -4,7 +4,8 @@
 
     Private Sub BtnCalculat_Click(sender As Object, e As EventArgs) Handles BtnCalculat.Click
         Limite = txtLimite.Text
-        Dim llenado(Limite - 1, Limite - 1) As Double
+        Dim llenado(Limite - 1, Limite) As Double
+
         For index = 1 To Limite
             For index2 = 0 To 1
                 Dim LlenadoForm = New Llenado
@@ -23,11 +24,6 @@
             Salida.Rows.Add(index - 1, llenado(index - 1, 0), llenado(index - 1, 1))
         Next
 
-        For index = 0 To Limite - 1
-            For index2 = 0 To Limite - index + 1
-                llenado(index2, index + 2) = llenado(index + 1, index2 + 1) - llenado(index + 1, index2)
-            Next
-        Next
         x = llenado
     End Sub
 
@@ -36,7 +32,11 @@
     End Sub
 
     Private Sub btnbuscar_Click(sender As Object, e As EventArgs) Handles btnbuscar.Click
-
+        For index = 0 To Limite - 2
+            For index2 = 0 To Limite - (index + 2)
+                x(index2, index + 2) = x(index2 + 1, index + 1) - x(index2, index + 1)
+            Next
+        Next
     End Sub
 
     Private Sub Limpiar_Click(sender As Object, e As EventArgs) Handles Limpiar.Click
