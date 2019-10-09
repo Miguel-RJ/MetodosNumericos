@@ -31,6 +31,7 @@ Partial Class Pares
         Me.BtnCalculat = New System.Windows.Forms.Button()
         Me.BtnSalir = New System.Windows.Forms.Button()
         Me.Limpiar = New System.Windows.Forms.Button()
+        Me.btnbuscar = New System.Windows.Forms.Button()
         CType(Me.Salida, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -81,7 +82,7 @@ Partial Class Pares
         Me.BtnCalculat.Name = "BtnCalculat"
         Me.BtnCalculat.Size = New System.Drawing.Size(75, 23)
         Me.BtnCalculat.TabIndex = 3
-        Me.BtnCalculat.Text = "Calcular"
+        Me.BtnCalculat.Text = "Llenar"
         Me.BtnCalculat.UseVisualStyleBackColor = True
         '
         'BtnSalir
@@ -102,11 +103,21 @@ Partial Class Pares
         Me.Limpiar.Text = "BtnLimpiar"
         Me.Limpiar.UseVisualStyleBackColor = True
         '
+        'btnbuscar
+        '
+        Me.btnbuscar.Location = New System.Drawing.Point(303, 94)
+        Me.btnbuscar.Name = "btnbuscar"
+        Me.btnbuscar.Size = New System.Drawing.Size(75, 23)
+        Me.btnbuscar.TabIndex = 6
+        Me.btnbuscar.Text = "Buscar X"
+        Me.btnbuscar.UseVisualStyleBackColor = True
+        '
         'Pares
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(403, 332)
+        Me.Controls.Add(Me.btnbuscar)
         Me.Controls.Add(Me.Limpiar)
         Me.Controls.Add(Me.BtnSalir)
         Me.Controls.Add(Me.BtnCalculat)
@@ -130,4 +141,5 @@ Partial Class Pares
     Friend WithEvents BtnCalculat As Button
     Friend WithEvents BtnSalir As Button
     Friend WithEvents Limpiar As Button
+    Friend WithEvents btnbuscar As Button
 End Class
