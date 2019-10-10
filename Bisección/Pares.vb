@@ -1,5 +1,5 @@
 ﻿Public Class Pares
-    Dim Limite, i As Integer
+    Dim Limite As Integer
     Dim x(,) As Double
 
     Private Sub BtnCalculat_Click(sender As Object, e As EventArgs) Handles BtnCalculat.Click
@@ -32,17 +32,63 @@
     End Sub
 
     Private Sub btnbuscar_Click(sender As Object, e As EventArgs) Handles btnbuscar.Click
-        For index = 0 To Limite - 2
-            For index2 = 0 To Limite - (index + 2)
-                x(index2, index + 2) = x(index2 + 1, index + 1) - x(index2, index + 1)
-            Next
+        Dim s, m, n, xi, ib, xii, xia, coef As Double
+
+        xia = Txn.Text
+
+
+
+        For index = 1 To Limite
+            If xia <= x(0, index) Then
+                xi = x(index + 1, 0)
+                xii = x(index + 2, 0)
+                ib = index + 1
+                Exit For
+            End If
         Next
+
+        s = (xia - xi) / (xii - xi)
+        m = Limite - (ib + 1)
+        listSalidas.Items.Add("S=" + s.ToString())
+        listSalidas.Items.Add("M=" + m.ToString())
+        listSalidas.Items.Add("i=" + ib.ToString())
+        Dim coefs(m) As Double
+        For k = 1 To m
+            coefs(0) = 1
+            coef = 1
+            For j = 1 To k
+                coef = coef * (s - (j - 1)) / j
+            Next
+            coefs(k) = coef
+            listSalidas.Items.Add("coefs(" + k.ToString() + ")=" + coefs(k).ToString())
+        Next
+
+        Dim delta(m), deltaux As Double
+        delta(0) = coefs(0)
+        For k = 1 To m
+            deltaux = 0
+            For j = 0 To k
+
+                coef = 1
+                For p = 1 To j
+                    coef = coef * (k - (j - p)) / p
+                Next
+                deltaux = deltaux + (-1) ^ j * coef * x(ib + k - j, 1)
+                delta(k) = deltaux
+            Next
+            listSalidas.Items.Add("delta(" + (k - 1).ToString() + ")=" + deltaux.ToString())
+        Next
+        Dim suma As Double
+        suma = x(ib, 1)
+        For K = 1 To 4
+            suma = suma + (coefs(K) * delta(K))
+        Next
+        listSalidas.Items.Add("Resultado = " + suma.ToString())
     End Sub
 
     Private Sub Limpiar_Click(sender As Object, e As EventArgs) Handles Limpiar.Click
         Salida.Rows.Clear()
         txtLimite.Text = ""
-        i = 0
         LBLIngrese.Text = "Ingrese cuantas filas"
     End Sub
 

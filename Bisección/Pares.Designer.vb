@@ -34,6 +34,7 @@ Partial Class Pares
         Me.btnbuscar = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Txn = New System.Windows.Forms.TextBox()
+        Me.listSalidas = New System.Windows.Forms.ListBox()
         CType(Me.Salida, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -131,11 +132,20 @@ Partial Class Pares
         Me.Txn.Size = New System.Drawing.Size(100, 20)
         Me.Txn.TabIndex = 7
         '
+        'listSalidas
+        '
+        Me.listSalidas.FormattingEnabled = True
+        Me.listSalidas.Location = New System.Drawing.Point(412, 7)
+        Me.listSalidas.Name = "listSalidas"
+        Me.listSalidas.Size = New System.Drawing.Size(240, 290)
+        Me.listSalidas.TabIndex = 9
+        '
         'Pares
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(403, 332)
+        Me.ClientSize = New System.Drawing.Size(693, 332)
+        Me.Controls.Add(Me.listSalidas)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Txn)
         Me.Controls.Add(Me.btnbuscar)
@@ -165,4 +175,5 @@ Partial Class Pares
     Friend WithEvents btnbuscar As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents Txn As TextBox
+    Friend WithEvents listSalidas As ListBox
 End Class
