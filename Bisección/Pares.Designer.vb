@@ -121,9 +121,9 @@ Partial Class Pares
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(17, 94)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(142, 18)
+        Me.Label1.Size = New System.Drawing.Size(131, 18)
         Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Ingrese cuantas filas"
+        Me.Label1.Text = "Ingrese X a buscar"
         '
         'Txn
         '
@@ -134,10 +134,12 @@ Partial Class Pares
         '
         'listSalidas
         '
+        Me.listSalidas.Font = New System.Drawing.Font("Lucida Sans Unicode", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.listSalidas.FormattingEnabled = True
+        Me.listSalidas.ItemHeight = 23
         Me.listSalidas.Location = New System.Drawing.Point(412, 7)
         Me.listSalidas.Name = "listSalidas"
-        Me.listSalidas.Size = New System.Drawing.Size(240, 290)
+        Me.listSalidas.Size = New System.Drawing.Size(240, 280)
         Me.listSalidas.TabIndex = 9
         '
         'Pares
