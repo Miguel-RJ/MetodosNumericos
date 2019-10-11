@@ -60,7 +60,7 @@
                 coef = coef * (s - (j - 1)) / j
             Next
             coefs(k) = coef
-            listSalidas.Items.Add("coefs(" + k.ToString() + ")=" + coefs(k).ToString())
+            listSalidas.Items.Add("coefs(" + k.ToString() + ")=" + Math.Round(coefs(k), 2).ToString())
         Next
 
         Dim delta(m), deltaux As Double
@@ -68,7 +68,6 @@
         For k = 1 To m
             deltaux = 0
             For j = 0 To k
-
                 coef = 1
                 For p = 1 To j
                     coef = coef * (k - (j - p)) / p
@@ -76,14 +75,14 @@
                 deltaux = deltaux + (-1) ^ j * coef * x(ib + k - j, 1)
                 delta(k) = deltaux
             Next
-            listSalidas.Items.Add("delta(" + (k - 1).ToString() + ")=" + deltaux.ToString())
+            listSalidas.Items.Add("delta(" + (k - 1).ToString() + ")=" + Math.Round(deltaux, 2).ToString())
         Next
         Dim suma As Double
         suma = x(ib, 1)
-        For K = 1 To 4
+        For K = 1 To 3
             suma = suma + (coefs(K) * delta(K))
         Next
-        listSalidas.Items.Add("Resultado = " + suma.ToString())
+        listSalidas.Items.Add("Resultado = " + Math.Round(suma, 2).ToString())
     End Sub
 
     Private Sub Limpiar_Click(sender As Object, e As EventArgs) Handles Limpiar.Click
